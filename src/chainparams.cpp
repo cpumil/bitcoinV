@@ -114,10 +114,10 @@ public:
         // It is calculated by summing the work done in each block which is calculated by doing 2^256/(target+1)
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000000001c051c051c050");
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000005a6e9975fe61f2ad");
                                                 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("00000000000a402a29b8e86414552bf6d7f0c5026d59fc0147fdcc48e5fbcf8c");
+        consensus.defaultAssumeValid = uint256S("000000000001e87c9866f23358ec86ce39ef4255a704d05219762f66f335b49e");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -219,7 +219,9 @@ public:
                 {100,   uint256S("00000000015488a23508da3eec027eaa670122e9532251091c706f00e97374f6")},
                 {200,   uint256S("0000000004768f1061608e1c060ed5cb106cc40e8f83513293059b0432267fef")},
                 {300,   uint256S("0000000000ca1d3601bce417ef0024f29f68b8e81a6affd1368227345ee24a90")},
-                {395,   uint256S("00000000000a402a29b8e86414552bf6d7f0c5026d59fc0147fdcc48e5fbcf8c")},
+                {400,   uint256S("0000000000009205785a036ba12b3a6a5ac5d6c49f1029dde215084db9d1597c")},
+                {500,   uint256S("000000000001e87c9866f23358ec86ce39ef4255a704d05219762f66f335b49e")},
+                {1100,   uint256S("00000000000001dce5294960d90ecea9b754edd50346c4d2341ce323eeab6703")},
 
             }
         };
