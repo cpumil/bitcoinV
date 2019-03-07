@@ -238,7 +238,8 @@ am__DIST_COMMON = $(srcdir)/Makefile.in \
 	$(top_srcdir)/test/util/bitcoin-util-test.py \
 	$(top_srcdir)/test/util/rpcauth-test.py COPYING \
 	build-aux/compile build-aux/config.guess build-aux/config.sub \
-	build-aux/install-sh build-aux/ltmain.sh build-aux/missing
+	build-aux/depcomp build-aux/install-sh build-aux/ltmain.sh \
+	build-aux/missing
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -315,12 +316,12 @@ CLIENT_VERSION_BUILD = 0
 CLIENT_VERSION_IS_RELEASE = true
 CLIENT_VERSION_MAJOR = 1
 CLIENT_VERSION_MINOR = 1
-CLIENT_VERSION_REVISION = 1
+CLIENT_VERSION_REVISION = 3
 COMPAT_LDFLAGS = 
 COPYRIGHT_HOLDERS = The %s developers
 COPYRIGHT_HOLDERS_FINAL = The BitcoinV Core developers
 COPYRIGHT_HOLDERS_SUBSTITUTION = BitcoinV Core
-COPYRIGHT_YEAR = 2018
+COPYRIGHT_YEAR = 2019
 CPP = gcc -E
 CPPFILT = /usr/bin/c++filt
 CPPFLAGS =  -DHAVE_BUILD_INFO -D__STDC_FORMAT_MACROS -I/usr/local/opt/berkeley-db@4/include -DMAC_OSX
@@ -411,10 +412,10 @@ OTOOL64 = :
 PACKAGE = bitcoin
 PACKAGE_BUGREPORT = https://github.com/bitcoinVBR/bitcoinV/issues
 PACKAGE_NAME = BitcoinV Core
-PACKAGE_STRING = BitcoinV Core 1.1.1
+PACKAGE_STRING = BitcoinV Core 1.1.3
 PACKAGE_TARNAME = bitcoin
 PACKAGE_URL = http://bitcoinv.org/
-PACKAGE_VERSION = 1.1.1
+PACKAGE_VERSION = 1.1.3
 PATH_SEPARATOR = :
 PIC_FLAGS = -fPIC
 PIE_FLAGS = 
@@ -491,7 +492,7 @@ UNIVALUE_CFLAGS = -I$(srcdir)/univalue/include
 UNIVALUE_LIBS = univalue/libunivalue.la
 USE_QRCODE = 
 USE_UPNP = 
-VERSION = 1.1.1
+VERSION = 1.1.3
 WARN_CXXFLAGS =  -Wall -Wextra -Wformat -Wvla -Wformat-security -Wthread-safety-analysis -Wrange-loop-analysis
 WINDOWS_BITS = 
 WINDRES = 

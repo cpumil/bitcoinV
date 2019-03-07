@@ -23,8 +23,8 @@
                     "ignoreFailures": true
                 }
             ],
-            //"MIMode":"lldb",
-            //"miDebuggerPath": "/Applications/Xcode.app/Contents/Developer/usr/bin/lldb-mi",
+            "MIMode":"lldb",
+            "miDebuggerPath": "/Applications/Xcode.app/Contents/Developer/usr/bin/lldb-mi",
         }
     ]
 }
