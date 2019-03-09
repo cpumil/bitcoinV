@@ -1,4 +1,4 @@
-// Copyright (c) 2018 The BitcoinV Core developers
+// Copyright (c) 2018-2019 The BitcoinV Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #include <iostream>
@@ -83,15 +83,34 @@ uint32_t get_max_extra_multiply_allowed(uint32_t num_consecutive_ones)
         return num_consecutive_ones;
     }
 
+    // Boost on past 4 bits matching
     num_consecutive_ones += 5;
 
     uint64_t max_allowed = 1 << (num_consecutive_ones);
 
     // max extra reward is about 1 million times regular block reward
-    if ( max_allowed >= (1 << 20) )
+    if ( max_allowed >= MAX_VBR_MULTIPLY )
     {
-        max_allowed = (1 << 20);
+        max_allowed = MAX_VBR_MULTIPLY;
     }
 
     return max_allowed;
+}
+
+// Find nearest lower power of 2
+uint32_t floor_power_2_vbr (int32_t x)
+{
+    if ( x < 1) {
+        return 1;
+    }
+    if ( x > MAX_VBR_MULTIPLY ) {
+        return MAX_VBR_MULTIPLY;
+    }
+
+    x = x | (x >> 1);
+    x = x | (x >> 2);
+    x = x | (x >> 4);
+    x = x | (x >> 8);
+    x = x | (x >> 16);
+    return x - (x >> 1);
 }
