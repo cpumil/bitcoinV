@@ -114,7 +114,7 @@ public:
         // It is calculated by summing the work done in each block which is calculated by doing 2^256/(target+1)
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000005a6e9975fe61f2ad");
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000020b11585a7eba829a");
                                                 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("000000000001e87c9866f23358ec86ce39ef4255a704d05219762f66f335b49e");
@@ -182,21 +182,7 @@ public:
         vSeeds.emplace_back("seed6.bitcoinv.org");
         vSeeds.emplace_back("seed7.bitcoinv.org");
         vSeeds.emplace_back("seed8.bitcoinv.org");
-
-        vSeeds.emplace_back("seed1.bitcoinv.io");
-        vSeeds.emplace_back("seed2.bitcoinv.io");
-        vSeeds.emplace_back("seed3.bitcoinv.io");
-        vSeeds.emplace_back("seed4.bitcoinv.io");
-
-        vSeeds.emplace_back("seed1.bitcoinvbr.org");
-        vSeeds.emplace_back("seed2.bitcoinvbr.org");
-        vSeeds.emplace_back("seed3.bitcoinvbr.org");
-        vSeeds.emplace_back("seed4.bitcoinvbr.org");
-
-        vSeeds.emplace_back("seed1.bitcoinvbr.com");
-        vSeeds.emplace_back("seed2.bitcoinvbr.com");
-        vSeeds.emplace_back("seed3.bitcoinvbr.com");
-        vSeeds.emplace_back("seed4.bitcoinvbr.com");
+        vSeeds.emplace_back("seed9.bitcoinv.org");
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
@@ -222,7 +208,8 @@ public:
                 {400,   uint256S("0000000000009205785a036ba12b3a6a5ac5d6c49f1029dde215084db9d1597c")},
                 {500,   uint256S("000000000001e87c9866f23358ec86ce39ef4255a704d05219762f66f335b49e")},
                 {1100,   uint256S("00000000000001dce5294960d90ecea9b754edd50346c4d2341ce323eeab6703")},
-
+                {1500,   uint256S("0000000000000138bd2e62bcbcd62fbb90834a7b74f2f8436d93c8c96fc5a144")},
+                {1900,   uint256S("00000000000001071393ab3f56bb9a39f5cd49a9ef936a9d844282776a7cb76a")},
             }
         };
 

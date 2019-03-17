@@ -18,6 +18,7 @@
 #include <qt/walletmodel.h>
 
 #include <ui_interface.h>
+#include <variable_block_reward.h>
 
 #include <QComboBox>
 #include <QDateTimeEdit>
@@ -127,10 +128,10 @@ MinerView::MinerView(const PlatformStyle *platformStyle, QWidget *parent) :
 
 }
 
-
 // Handle the specified reward.
 void MinerView::handleRewardMultiplier(int pos)
 {
-    g_extra_multiply = 1 << pos;
+    int32_t mult_fact = 1 << pos;
+    g_extra_multiply = floor_power_2_vbr(mult_fact);
     return;
 }

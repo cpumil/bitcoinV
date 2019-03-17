@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 The BitcoinV Core developers
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
@@ -44,6 +45,7 @@
 #include <util.h>
 #include <utilmoneystr.h>
 #include <validationinterface.h>
+#include <variable_block_reward.h>
 #include <warnings.h>
 #include <walletinitinterface.h>
 #include <stdint.h>
@@ -387,6 +389,7 @@ void SetupServerArgs()
             "(default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, >=%u = automatically prune block files to stay under the specified target size in MiB)", MIN_DISK_SPACE_FOR_BLOCK_FILES / 1024 / 1024), false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-reindex", "Rebuild chain state and block index from the blk*.dat files on disk", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-reindex-chainstate", "Rebuild chain state from the currently indexed blocks", false, OptionsCategory::OPTIONS);
+    gArgs.AddArg("-setvbrmultiplier=<n>", "Set the Variable Block Reward (VBR) multiplier for mining. Value <n> will automatically be rounded to the nearest lower power of 2", false, OptionsCategory::OPTIONS);
 #ifndef WIN32
     gArgs.AddArg("-sysperms", "Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)", false, OptionsCategory::OPTIONS);
 #else
@@ -1172,6 +1175,11 @@ bool AppInitParameterInteraction()
             }
         }
     }
+
+    // -setvbrmultiplier=<n>
+    int32_t nMultArg = gArgs.GetArg("-setvbrmultiplier", 1);
+    g_extra_multiply = floor_power_2_vbr(nMultArg);
+
     return true;
 }
 
