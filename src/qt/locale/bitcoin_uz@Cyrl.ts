@@ -86,10 +86,6 @@
         <translation>&amp;Кўриб чиқиш</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Улам</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Ҳамённинг умумий кўринишини кўрсатиш</translation>
     </message>
@@ -134,14 +130,6 @@
         <translation>Махфий сўзни &amp;ўзгартириш...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Жўнатилувчи манзиллар...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Қабул қилувчи манзиллар...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Интернет манзилни очиш</translation>
     </message>
@@ -176,10 +164,6 @@
     <message>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Ҳамён</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -226,8 +210,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinv: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва bitcoinv ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва bitcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -238,7 +222,7 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a bitcoinv: URI or payment request</source>
+        <source>Open a bitcoin: URI or payment request</source>
         <translation>Bitcoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
@@ -276,6 +260,14 @@
     <message>
         <source>Up to date</source>
         <translation>Янгиланган</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Ойна</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Камайтириш</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -488,10 +480,6 @@
     <message>
         <source>Size of &amp;database cache</source>
         <translation>&amp;Маълумотлар базаси кеши</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>МБ</translation>
     </message>
     <message>
         <source>Number of script &amp;verification threads</source>
@@ -1161,6 +1149,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1170,7 +1161,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoin Core</translation>

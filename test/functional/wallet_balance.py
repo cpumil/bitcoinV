@@ -67,7 +67,7 @@ class WalletTest(BitcoinTestFramework):
         assert_equal(self.nodes[0].getbalance("*", 1, True), 50)
         assert_equal(self.nodes[0].getbalance(minconf=1), 50)
 
-        # Send 40 BTCV from 0 to 1 and 60 BTCV from 1 to 0.
+        # Send 40 BTC from 0 to 1 and 60 BTC from 1 to 0.
         txs = create_transactions(self.nodes[0], self.nodes[1].getnewaddress(), 40, [Decimal('0.01')])
         self.nodes[0].sendrawtransaction(txs[0]['hex'])
         self.nodes[1].sendrawtransaction(txs[0]['hex'])  # sending on both nodes is faster than waiting for propagation
@@ -128,6 +128,18 @@ class WalletTest(BitcoinTestFramework):
 
         # getbalance with minconf=2 will show the new balance.
         assert_equal(self.nodes[1].getbalance(minconf=2), Decimal('0'))
+
+        # check mempool transactions count for wallet unconfirmed balance after
+        # dynamically loading the wallet.
+        before = self.nodes[1].getunconfirmedbalance()
+        dst = self.nodes[1].getnewaddress()
+        self.nodes[1].unloadwallet('')
+        self.nodes[0].sendtoaddress(dst, 0.1)
+        self.sync_all()
+        self.nodes[1].loadwallet('')
+        after = self.nodes[1].getunconfirmedbalance()
+        assert_equal(before + Decimal('0.1'), after)
+
 
 if __name__ == '__main__':
     WalletTest().main()

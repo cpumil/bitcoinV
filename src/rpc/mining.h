@@ -1,3 +1,4 @@
+// Copyright (c) 2019 The BitcoinV Core developers
 // Copyright (c) 2017 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -11,8 +12,5 @@
 
 /** Generate blocks (mine) */
 UniValue generateBlocks(std::shared_ptr<CReserveScript> coinbaseScript, int nGenerate, uint64_t nMaxTries, uint64_t extra_multiply, bool keepScript);
-
-/** Check bounds on a command line confirm target */
-unsigned int ParseConfirmTarget(const UniValue& value);
 
 #endif

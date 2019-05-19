@@ -53,8 +53,10 @@ class ListSinceBlockTest (BitcoinTestFramework):
                                 "42759cde25462784395a337460bde75f58e73d3f08bd31fdc3507cbac856a2c4")
         assert_raises_rpc_error(-5, "Block not found", self.nodes[0].listsinceblock,
                                 "0000000000000000000000000000000000000000000000000000000000000000")
-        assert_raises_rpc_error(-5, "Block not found", self.nodes[0].listsinceblock,
+        assert_raises_rpc_error(-8, "blockhash must be of length 64 (not 11, for 'invalid-hex')", self.nodes[0].listsinceblock,
                                 "invalid-hex")
+        assert_raises_rpc_error(-8, "blockhash must be hexadecimal string (not 'Z000000000000000000000000000000000000000000000000000000000000000')", self.nodes[0].listsinceblock,
+                                "Z000000000000000000000000000000000000000000000000000000000000000")
 
     def test_reorg(self):
         '''
@@ -126,8 +128,8 @@ class ListSinceBlockTest (BitcoinTestFramework):
 
         Problematic case:
 
-        1. User 1 receives BTCV in tx1 from utxo1 in block aa1.
-        2. User 2 receives BTCV in tx2 from utxo1 (same) in block bb1
+        1. User 1 receives BTC in tx1 from utxo1 in block aa1.
+        2. User 2 receives BTC in tx2 from utxo1 (same) in block bb1
         3. User 1 sees 2 confirmations at block aa3.
         4. Reorg into bb chain.
         5. User 1 asks `listsinceblock aa3` and does not see that tx1 is now

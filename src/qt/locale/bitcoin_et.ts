@@ -322,10 +322,6 @@
         <translation>Bitcoin</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Rahakott</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>&amp;Saada</translation>
     </message>
@@ -370,11 +366,11 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinv: URIs)</source>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
         <translation>Loo maksepäring (genereerib QR koodid ja bitcoini: URId)</translation>
     </message>
     <message>
-        <source>Open a bitcoinv: URI or payment request</source>
+        <source>Open a bitcoin: URI or payment request</source>
         <translation>Ava bitcoini: URI või maksepäring</translation>
     </message>
     <message>
@@ -424,6 +420,10 @@
     <message>
         <source>Up to date</source>
         <translation>Ajakohane</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Aken</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -714,10 +714,6 @@
     <message>
         <source>&amp;Main</source>
         <translation>&amp;Peamine</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -1879,6 +1875,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1916,7 +1915,7 @@
     </message>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoini tuumik</translation>

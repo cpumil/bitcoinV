@@ -169,6 +169,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -178,6 +181,6 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     </context>
 </TS>

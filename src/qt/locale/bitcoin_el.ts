@@ -38,10 +38,6 @@
         <translation>Κλείσιμο εφαρμογής</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Πορτοφόλι</translation>
-    </message>
-    <message>
         <source>Error</source>
         <translation>Σφάλμα</translation>
     </message>
@@ -193,6 +189,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -202,7 +201,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Insufficient funds</source>
         <translation>Κεφάλαια μη επαρκή</translation>

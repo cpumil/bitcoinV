@@ -146,10 +146,6 @@
         <translation>Bitcoin</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Cassidile</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>&amp;Mitte</translation>
     </message>
@@ -224,6 +220,10 @@
     <message>
         <source>Up to date</source>
         <translation>Recentissimo</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Fenestra</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -741,6 +741,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -750,7 +753,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoin Nucleus</translation>

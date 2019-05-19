@@ -32,8 +32,16 @@ class TxnMallTest(BitcoinTestFramework):
         disconnect_nodes(self.nodes[2], 1)
 
     def run_test(self):
-        # All nodes should start with 1,250 BTCV:
+        # All nodes should start with 1,250 BTC:
         starting_balance = 1250
+
+        # All nodes should be out of IBD.
+        # If the nodes are not all out of IBD, that can interfere with
+        # blockchain sync later in the test when nodes are connected, due to
+        # timing issues.
+        for n in self.nodes:
+            assert n.getblockchaininfo()["initialblockdownload"] == False
+
         for i in range(4):
             assert_equal(self.nodes[i].getbalance(), starting_balance)
             self.nodes[i].getnewaddress("")  # bug workaround, coins generated assigned to first getnewaddress!
@@ -53,7 +61,7 @@ class TxnMallTest(BitcoinTestFramework):
         # Coins are sent to node1_address
         node1_address = self.nodes[1].getnewaddress()
 
-        # First: use raw transaction API to send 1240 BTCV to node1_address,
+        # First: use raw transaction API to send 1240 BTC to node1_address,
         # but don't broadcast:
         doublespend_fee = Decimal('-.02')
         rawtx_input_0 = {}
@@ -71,7 +79,7 @@ class TxnMallTest(BitcoinTestFramework):
         doublespend = self.nodes[0].signrawtransactionwithwallet(rawtx)
         assert_equal(doublespend["complete"], True)
 
-        # Create two spends using 1 50 BTCV coin each
+        # Create two spends using 1 50 BTC coin each
         txid1 = self.nodes[0].sendtoaddress(node1_address, 40)
         txid2 = self.nodes[0].sendtoaddress(node1_address, 20)
 

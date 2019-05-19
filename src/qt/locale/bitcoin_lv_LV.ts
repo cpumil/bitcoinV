@@ -150,10 +150,6 @@
         <translation>&amp;Pārskats</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Rādīt vispārēju maciņa pārskatu</translation>
     </message>
@@ -198,14 +194,6 @@
         <translation>Mainīt &amp;Paroli...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Sūtīšanas adreses...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Saņemšanas &amp;adreses...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Atvērt &amp;URI...</translation>
     </message>
@@ -240,10 +228,6 @@
     <message>
         <source>Bitcoin</source>
         <translation>Bitcoin</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Maciņš</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -290,12 +274,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinv: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un bitcoinv: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un bitcoin: URIs)</translation>
     </message>
     <message>
-        <source>Open a bitcoinv: URI or payment request</source>
-        <translation>Atvērt bitcoinv URI vai maksājuma pieprasījumu</translation>
+        <source>Open a bitcoin: URI or payment request</source>
+        <translation>Atvērt bitcoin URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -324,6 +308,10 @@
     <message>
         <source>Up to date</source>
         <translation>Sinhronizēts</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Logs</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -522,10 +510,6 @@
         <translation>&amp;Datubāzes kešatmiņas izmērs</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Skriptu &amp;pārbaudes pavedienu skaits</translation>
     </message>
@@ -536,10 +520,6 @@
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
         <translation>Minimizēt nevis aizvērt aplikāciju, kad logs tiek aizvērts. Kad šī iespēja ir ieslēgta, aplikācija tiks aizvērta, izvēloties Aizvērt izvēlnē.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktīvās komandrindas opcijas, kuras pārspēko šos iestatījumus:</translation>
     </message>
     <message>
         <source>Reset all client options to default.</source>
@@ -563,7 +543,7 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt bitcoinv &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt bitcoin &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
@@ -1193,6 +1173,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1202,7 +1185,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoin Core</translation>

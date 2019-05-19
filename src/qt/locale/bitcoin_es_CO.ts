@@ -243,10 +243,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>&amp;Visión de conjunto</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nodo</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Mostrar vista general de la billetera</translation>
     </message>
@@ -289,14 +285,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>&amp;Change Passphrase...</source>
         <translation>&amp;Cambiar contraseña...</translation>
-    </message>
-    <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Enviando Direcciones...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Recibiendo Direcciones...</translation>
     </message>
     <message>
         <source>Open &amp;URI...</source>
@@ -347,10 +335,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Bitcoin</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Billetera</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>&amp;Enviar</translation>
     </message>
@@ -395,8 +379,8 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Barra de herramientas de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitcoinv: URIs)</source>
-        <translation>Solicitar pagos (genera códigos QR y bitcoinv: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcoin: URIs)</source>
+        <translation>Solicitar pagos (genera códigos QR y bitcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -407,8 +391,8 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Mostrar la lista de direcciones y etiquetas de recepción usadas</translation>
     </message>
     <message>
-        <source>Open a bitcoinv: URI or payment request</source>
-        <translation>Abra un bitcoinv: URI o solicitud de pago</translation>
+        <source>Open a bitcoin: URI or payment request</source>
+        <translation>Abra un bitcoin: URI o solicitud de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -441,6 +425,10 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>Up to date</source>
         <translation>A hoy</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>Ventana</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -741,8 +729,8 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Formar</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoinv network, as detailed below.</source>
-        <translation>Es posible que las transacciones recientes aún no estén visibles y, por lo tanto, el saldo de su billetera podría ser incorrecto. Esta información será correcta una vez que su billetera haya terminado de sincronizarse con la red bitcoinv, como se detalla a continuación.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcoin network, as detailed below.</source>
+        <translation>Es posible que las transacciones recientes aún no estén visibles y, por lo tanto, el saldo de su billetera podría ser incorrecto. Esta información será correcta una vez que su billetera haya terminado de sincronizarse con la red bitcoin, como se detalla a continuación.</translation>
     </message>
     <message>
         <source>Attempting to spend bitcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
@@ -819,10 +807,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Tamaño de la memoria caché de la base de datos</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Cantidad de secuencias de comandos y verificación</translation>
     </message>
@@ -849,10 +833,6 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     <message>
         <source>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Exit in the menu.</source>
         <translation>Minimice en lugar de salir de la aplicación cuando la ventana esté cerrada. Cuando esta opción está habilitada, la aplicación se cerrará solo después de seleccionar Salir en el menú.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Opciones de línea de comando activas que anulan las opciones anteriores:</translation>
     </message>
     <message>
         <source>Open Configuration File</source>
@@ -1121,7 +1101,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
         <translation>Error de solicitud de pago</translation>
     </message>
     <message>
-        <source>Cannot start bitcoinv: click-to-pay handler</source>
+        <source>Cannot start bitcoin: click-to-pay handler</source>
         <translation>No se puede iniciar Bitcoin: controlador de clic para pagar</translation>
     </message>
     <message>
@@ -1879,6 +1859,9 @@ Tarifa de copia</translation>
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1893,7 +1876,7 @@ Exportar los datos en la pestaña actual a un archivo</translation>
     </message>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Bitcoin Core</source>
         <translation>Bitcoin Core</translation>
