@@ -61,11 +61,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
    return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
 
-void CChainParams::UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout)
-{
-    consensus.vDeployments[d].nStartTime = nStartTime;
-    consensus.vDeployments[d].nTimeout = nTimeout;
-}
+
 
 /**
  * Main network
@@ -445,8 +441,8 @@ public:
         // consensus.hashGenesisBlock: c12a6d0e08a807bbdcfef151cdcb6e2f7c5d6ac66f6e1de22e1c950e25c6a183
         // genesis.hashMerkleRoot:     c41041da878b479cd4e0537bf00525f1738c42e36e30b9214a7bfa7358fe89d0
                                                          
-        assert(consensus.hashGenesisBlock == uint256S("0x00009a004b86c066b21aaffe2325a2bf5cb80ccf572c137cb24086cc83ca0542"));
-        assert(genesis.hashMerkleRoot == uint256S("0xc41041da878b479cd4e0537bf00525f1738c42e36e30b9214a7bfa7358fe89d0"));
+        //assert(consensus.hashGenesisBlock == uint256S("000000004c2738ff52ee6dc039d4fde2f3292fed9afa9d712f895d7094f8d350"));
+        //assert(genesis.hashMerkleRoot == uint256S("c36c4216baf256beb34d939e7aa158a54b7488be996e8bdab8d83ff9c73f1f4d"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
