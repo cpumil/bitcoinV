@@ -74,10 +74,6 @@
         <translation>Биткоин</translation>
     </message>
     <message>
-        <source>Wallet</source>
-        <translation>Әмиян</translation>
-    </message>
-    <message>
         <source>&amp;Send</source>
         <translation>Жіберу</translation>
     </message>
@@ -301,6 +297,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -310,7 +309,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitcoinv-core</name>
+    <name>bitcoin-core</name>
     <message>
         <source>Information</source>
         <translation>Информация</translation>
