@@ -1,5 +1,4 @@
-// Copyright (c) 2019 The BitcoinV Core developers
-// Copyright (c) 2011-2018 The Bitcoin Core developers
+// Copyright (c) 2011-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -132,12 +131,6 @@ void WalletFrame::gotoOverviewPage()
         i.value()->gotoOverviewPage();
 }
 
-void WalletFrame::gotoMinerPage()
-{
-    QMap<WalletModel*, WalletView*>::const_iterator i;
-    for (i = mapWalletViews.constBegin(); i != mapWalletViews.constEnd(); ++i)
-        i.value()->gotoMinerPage();
-}
 void WalletFrame::gotoHistoryPage()
 {
     QMap<WalletModel*, WalletView*>::const_iterator i;
