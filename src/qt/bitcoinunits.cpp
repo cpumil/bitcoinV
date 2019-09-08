@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 The BitcoinV Core developers
 // Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -17,9 +18,9 @@ BitcoinUnits::BitcoinUnits(QObject *parent):
 QList<BitcoinUnits::Unit> BitcoinUnits::availableUnits()
 {
     QList<BitcoinUnits::Unit> unitlist;
-    unitlist.append(BTC);
-    unitlist.append(mBTC);
-    unitlist.append(uBTC);
+    unitlist.append(BTCV);
+    unitlist.append(mBTCV);
+    unitlist.append(uBTCV);
     unitlist.append(SAT);
     return unitlist;
 }
@@ -28,9 +29,9 @@ bool BitcoinUnits::valid(int unit)
 {
     switch(unit)
     {
-    case BTC:
-    case mBTC:
-    case uBTC:
+    case BTCV:
+    case mBTCV:
+    case uBTCV:
     case SAT:
         return true;
     default:
@@ -42,9 +43,9 @@ QString BitcoinUnits::longName(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("BTC");
-    case mBTC: return QString("mBTC");
-    case uBTC: return QString::fromUtf8("µBTC (bits)");
+    case BTCV: return QString("BTCV");
+    case mBTCV: return QString("mBTCV");
+    case uBTCV: return QString::fromUtf8("µBTCV (bits)");
     case SAT: return QString("Satoshi (sat)");
     default: return QString("???");
     }
@@ -54,7 +55,7 @@ QString BitcoinUnits::shortName(int unit)
 {
     switch(unit)
     {
-    case uBTC: return QString::fromUtf8("bits");
+    case uBTCV: return QString::fromUtf8("bits");
     case SAT: return QString("sat");
     default: return longName(unit);
     }
@@ -64,9 +65,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BTC: return QString("Bitcoins");
-    case mBTC: return QString("Milli-Bitcoins (1 / 1" THIN_SP_UTF8 "000)");
-    case uBTC: return QString("Micro-Bitcoins (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BTCV: return QString("Bitcoinvs");
+    case mBTCV: return QString("Milli-Bitcoinvs (1 / 1" THIN_SP_UTF8 "000)");
+    case uBTCV: return QString("Micro-Bitcoinvs (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }
@@ -76,9 +77,9 @@ qint64 BitcoinUnits::factor(int unit)
 {
     switch(unit)
     {
-    case BTC: return 100000000;
-    case mBTC: return 100000;
-    case uBTC: return 100;
+    case BTCV: return 100000000;
+    case mBTCV: return 100000;
+    case uBTCV: return 100;
     case SAT: return 1;
     default: return 100000000;
     }
@@ -88,9 +89,9 @@ int BitcoinUnits::decimals(int unit)
 {
     switch(unit)
     {
-    case BTC: return 8;
-    case mBTC: return 5;
-    case uBTC: return 2;
+    case BTCV: return 8;
+    case mBTCV: return 5;
+    case uBTCV: return 2;
     case SAT: return 0;
     default: return 0;
     }

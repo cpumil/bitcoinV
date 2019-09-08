@@ -205,6 +205,7 @@ BITCOIN_CORE_H = \
   util/time.h \
   validation.h \
   validationinterface.h \
+  variable_block_reward.h \
   versionbits.h \
   versionbitsinfo.h \
   walletinitinterface.h \
@@ -284,6 +285,7 @@ libbitcoin_server_a_SOURCES = \
   ui_interface.cpp \
   validation.cpp \
   validationinterface.cpp \
+  variable_block_reward.cpp \
   versionbits.cpp \
   $(BITCOIN_CORE_H)
 
@@ -418,6 +420,8 @@ libbitcoin_common_a_SOURCES = \
   base58.cpp \
   bech32.cpp \
   chainparams.cpp \
+  chain.cpp \
+  pow.cpp \  
   coins.cpp \
   compressor.cpp \
   core_read.cpp \
@@ -435,6 +439,7 @@ libbitcoin_common_a_SOURCES = \
   script/ismine.cpp \
   script/sign.cpp \
   script/standard.cpp \
+  variable_block_reward.cpp \
   versionbitsinfo.cpp \
   warnings.cpp \
   $(BITCOIN_CORE_H)
