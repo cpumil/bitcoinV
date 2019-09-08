@@ -9,6 +9,7 @@
 #include <chain.h>
 #include <primitives/block.h>
 #include <uint256.h>
+#include <variable_block_reward.h>
 
 unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock, const Consensus::Params& params)
 {
@@ -88,4 +89,29 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
         return false;
 
     return true;
+}
+
+bool CheckProofOfWork(int height, uint256 hash, CBlock& block, const Consensus::Params& params)
+{
+    if (!CheckProofOfWork(hash, block.nBits, params)) {
+        return false;
+    }
+
+    if (0 == block.vtx.size()) {
+        return true; // no coinbase provided
+    }
+
+    // now check for VBR
+    CAmount maxAllowedSubsidy = GetBlockSubsidyVBR(height, params, block, false);
+
+    uint64_t miners_specified_subsidy = block.vtx[0]->vout[0].nValue;
+
+    // account for transaction fees at most (1 BTCV)
+    uint64_t max_allowed_output = maxAllowedSubsidy + 1;
+    if (miners_specified_subsidy <= max_allowed_output) {
+        // miner's specified block reward is ok, not too big.
+        return true;
+    }
+
+    return false;
 }
