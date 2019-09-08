@@ -1,4 +1,3 @@
-// Copyright (c) 2018-2019 The BitcoinV Core developers
 // Copyright (c) 2011-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -18,7 +17,6 @@ class ReceiveCoinsDialog;
 class SendCoinsDialog;
 class SendCoinsRecipient;
 class TransactionView;
-class MinerView;
 class WalletModel;
 class AddressBookPage;
 
@@ -62,7 +60,6 @@ private:
     WalletModel *walletModel;
 
     OverviewPage *overviewPage;
-    QWidget *minerPage;
     QWidget *transactionsPage;
     ReceiveCoinsDialog *receiveCoinsPage;
     SendCoinsDialog *sendCoinsPage;
@@ -70,7 +67,6 @@ private:
     AddressBookPage *usedReceivingAddressesPage;
 
     TransactionView *transactionView;
-    MinerView *minerView;
 
     QProgressDialog *progressDialog;
     const PlatformStyle *platformStyle;
@@ -78,8 +74,6 @@ private:
 public Q_SLOTS:
     /** Switch to overview (home) page */
     void gotoOverviewPage();
-    /** Switch to Miner page */
-    void gotoMinerPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to receive coins page */

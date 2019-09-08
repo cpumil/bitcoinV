@@ -1,4 +1,3 @@
-// Copyright (c) 2018-2019 The BitcoinV Core developers
 // Copyright (c) 2011-2019 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
@@ -128,7 +127,6 @@ private:
     QMenuBar* appMenuBar = nullptr;
     QToolBar* appToolBar = nullptr;
     QAction* overviewAction = nullptr;
-    QAction* minerAction = nullptr;
     QAction* historyAction = nullptr;
     QAction* quitAction = nullptr;
     QAction* sendCoinsAction = nullptr;
@@ -150,6 +148,7 @@ private:
     QAction* openAction = nullptr;
     QAction* showHelpMessageAction = nullptr;
     QAction* m_open_wallet_action{nullptr};
+    QMenu* m_open_wallet_menu{nullptr};
     QAction* m_close_wallet_action{nullptr};
     QAction* m_wallet_selector_label_action = nullptr;
     QAction* m_wallet_selector_action = nullptr;
@@ -259,8 +258,6 @@ public Q_SLOTS:
 #ifdef ENABLE_WALLET
     /** Switch to overview (home) page */
     void gotoOverviewPage();
-    /** Switch to miner page */
-    void gotoMinerPage();
     /** Switch to history (transactions) page */
     void gotoHistoryPage();
     /** Switch to receive coins page */
