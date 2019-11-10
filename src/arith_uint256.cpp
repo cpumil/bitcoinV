@@ -1,4 +1,3 @@
-// Copyright (c) 2018-2019 The BitcoinV Core developers
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Distributed under the MIT software license, see the accompanying
@@ -7,7 +6,6 @@
 #include <arith_uint256.h>
 
 #include <uint256.h>
-#include <util/strencodings.h>
 #include <crypto/common.h>
 
 #include <stdio.h>

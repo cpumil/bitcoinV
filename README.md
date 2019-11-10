@@ -1,10 +1,25 @@
+BitcoinV Core integration/staging tree
+=====================================
 
 http://www.bitcoinV.org
 
 What is BitcoinV?
 ----------------
 
-The original Bitcoin (BTCV) is no longer decentralized. BitcoinV (Variable Block Rewards) solves this problem by providing incentive to the original CPU and GPU miners. Miners that secure the blockchain beyond the current difficulty level are rewarded more block rewards. Block rewards can vary from the standard block reward up to 1 MILLION times the standard block reward! Mining now becomes very interesting for an individual miner, the JACKPOT is waiting to be mined! These JACKPOT block rewards keep the blockchain decentralized and more secure.
+BitcoinV aims to be a more decentralized version of Bitcoin. This is accomplished 
+using Satoshi's Missing Link - VBR Decentralization Algorithm. 
+The Variable Block Reward (VBR) feature is the engine behind promoting more 
+decentralization.
+
+Bitcoin is an experimental digital currency that enables instant payments to
+anyone, anywhere in the world. Bitcoin uses peer-to-peer technology to operate
+with no central authority: managing transactions and issuing money are carried
+out collectively by the network. Bitcoin Core is the name of open source
+software which enables the use of this currency.
+
+For more information, as well as an immediately useable, binary version of
+the Bitcoin Core software, see https://bitcoincore.org/en/download/, or read the
+[original whitepaper](https://bitcoincore.org/bitcoin.pdf).
 
 License
 -------
@@ -19,7 +34,8 @@ The `master` branch is regularly built and tested, but is not guaranteed to be
 completely stable. [Tags](https://github.com/bitcoinVBR/bitcoinV/tags) are created
 regularly to indicate new official, stable release versions of BitcoinV Core.
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
+The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
+and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
 
 Testing
 -------
@@ -48,3 +64,16 @@ Changes should be tested by somebody other than the developer who wrote the
 code. This is especially important for large or high-risk changes. It is useful
 to add a test plan to the pull request description if testing the changes is
 not straightforward.
+Translations
+------------
+
+Changes to translations as well as new translations can be submitted to
+[Bitcoin Core's Transifex page](https://www.transifex.com/bitcoin/bitcoin/).
+
+Translations are periodically pulled from Transifex and merged into the git repository. See the
+[translation process](doc/translation_process.md) for details on how this works.
+
+**Important**: We do not accept translation changes as GitHub pull requests because the next
+pull from Transifex would automatically overwrite them again.
+
+Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/bitcoin-translators).
