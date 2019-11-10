@@ -168,6 +168,10 @@ public:
         vSeeds.emplace_back("seed8.bitcoinv.org");
         vSeeds.emplace_back("seed9.bitcoinv.org");
 
+        vSeeds.emplace_back("seed1.satoshismissing.link");
+        vSeeds.emplace_back("seed2.satoshismissing.link");
+        vSeeds.emplace_back("seed3.satoshismissing.link");
+
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1,5);
@@ -204,6 +208,7 @@ public:
 				{10000,   uint256S("000000000000083ef66333f6320e82641784dd9795c2bcfaf96cafb5ad8031b9")},
 				{15000,   uint256S("00000000000002d98911e2328f81fedd259d084cb92014d51dcba6cc981fa07b")},
 				{18056,   uint256S("000000000000caf16a19e9f5a860159b45db24669fb3758a5ab6c49524a327de")},
+                {25465,   uint256S("00000000000000a1aba4bad2f460a198d1398bc3f99d6e8086b5280ee8920768")},
             }
         };
 
