@@ -59,7 +59,7 @@ class ZMQTest (BitcoinTestFramework):
         # Note that the publishing order is not defined in the documentation and
         # is subject to change.
         import zmq
-        address = 'tcp://127.0.0.1:28332'
+        address = 'tcp://127.0.0.1:29332'
         socket = self.ctx.socket(zmq.SUB)
         socket.set(zmq.RCVTIMEO, 60000)
 
@@ -128,7 +128,7 @@ class ZMQTest (BitcoinTestFramework):
 
     def test_reorg(self):
         import zmq
-        address = 'tcp://127.0.0.1:28333'
+        address = 'tcp://127.0.0.1:29333'
         socket = self.ctx.socket(zmq.SUB)
         socket.set(zmq.RCVTIMEO, 60000)
         hashblock = ZMQSubscriber(socket, b'hashblock')
