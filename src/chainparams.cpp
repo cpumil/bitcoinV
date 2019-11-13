@@ -108,7 +108,7 @@ public:
         pchMessageStart[1] = 0xb4;
         pchMessageStart[2] = 0xf3;
         pchMessageStart[3] = 0xa2;
-        nDefaultPort = 9333;
+        nDefaultPort = 9335;
         nPruneAfterHeight = 100000;
 
         uint32_t nTime=1544800001;
