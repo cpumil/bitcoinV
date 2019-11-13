@@ -68,7 +68,7 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
 class CMainParams : public CChainParams {
 public:
     CMainParams() {
-        strNetworkID = "main";
+        strNetworkID = "main"; 
         consensus.nSubsidyHalvingInterval = 210000; // #blocks before halving occurs. every 4 years
         consensus.BIP16Exception = uint256S("0x00000000000002dc756eebf4f49723ed8d30cc28a5f108eb94b1ba88ac4f9c22");
         consensus.BIP34Height = 22;
@@ -94,7 +94,8 @@ public:
 
 
         // The best chain should have at least this much work.
-        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000020b11585a7eba829a");
+        //consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000020b11585a7eba829a");
+        consensus.nMinimumChainWork =   uint256S("0000000000000000000000000000000000000000000000000000000000000001");
                                                 
         // By default assume that the signatures in ancestors of this block are valid.
         consensus.defaultAssumeValid = uint256S("000000000001e87c9866f23358ec86ce39ef4255a704d05219762f66f335b49e");
@@ -108,7 +109,7 @@ public:
         pchMessageStart[1] = 0xb4;
         pchMessageStart[2] = 0xf3;
         pchMessageStart[3] = 0xa2;
-        nDefaultPort = 9335;
+        nDefaultPort = 9333;
         nPruneAfterHeight = 100000;
 
         uint32_t nTime=1544800001;
