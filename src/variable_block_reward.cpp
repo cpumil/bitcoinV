@@ -78,17 +78,9 @@ uint32_t get_max_extra_multiply_allowed(uint32_t num_consecutive_ones)
         return 1;
     }
 
-    if ( num_consecutive_ones <= 4)
-    {
-        return num_consecutive_ones;
-    }
-
-    // Boost on past 4 bits matching
-    num_consecutive_ones += 5;
-
     uint64_t max_allowed = 1 << (num_consecutive_ones);
 
-    // max extra reward is about 1 million times regular block reward
+    // max extra reward is 16 times regular block reward
     if ( max_allowed >= MAX_VBR_MULTIPLY )
     {
         max_allowed = MAX_VBR_MULTIPLY;

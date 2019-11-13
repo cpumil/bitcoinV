@@ -8,7 +8,7 @@
 #include <consensus/params.h>
 #include <primitives/block.h>
 
-#define MAX_VBR_MULTIPLY    1048576
+#define MAX_VBR_MULTIPLY    16
 
 CAmount GetBlockSubsidyVBR(int nHeight, const Consensus::Params& consensusParams, const CBlock &block, bool print);
 uint32_t floor_power_2_vbr (int32_t x);
