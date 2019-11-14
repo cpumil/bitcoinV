@@ -53,11 +53,11 @@ tremenous amount of BTCV to flood the market. Lessons learned from the original 
 have been incorporated into the new BTCV. The reward system has 5 levels:
 
 VBR Multiplier:        Block Reward:
-      1                    50     BTCV    <---Standard BTC block reward
+      1                    50     BTCV    Standard BTC block reward
       2                    100    BTCV
       4                    200    BTCV
       8                    400    BTCV
-      16                   800    BTCV    <---MAX JACKPOT
+      16                   800    BTCV    MAX JACKPOT
 
 
 The above table still allows the VBR feature to form a more decentralized form of
