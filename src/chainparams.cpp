@@ -93,12 +93,13 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nTimeout = 1230767999; // December 31, 2008
 
 
-        // The best chain should have at least this much work.
-        //consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000020b11585a7eba829a");
-        consensus.nMinimumChainWork =   uint256S("0000000000000000000000000000000000000000000000000000000000000001");
+        // nMinimumChainWork is a value that is updated at every release. It is retrieved from the Debug command
+        //            getblockchaininfo 
+        consensus.nMinimumChainWork = uint256S("000000000000000000000000000000000000000000000000000002e002e002e0");
+
                                                 
         // By default assume that the signatures in ancestors of this block are valid.
-        consensus.defaultAssumeValid = uint256S("000000000001e87c9866f23358ec86ce39ef4255a704d05219762f66f335b49e");
+        consensus.defaultAssumeValid = uint256S("000000000000000000000000000000000000000000000000000002e002e002e0");
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -192,8 +193,8 @@ public:
         checkpointData = {
             {
                 {0,     uint256S("000000004c2738ff52ee6dc039d4fde2f3292fed9afa9d712f895d7094f8d350")},
-                //{100,   uint256S("00000000015488a23508da3eec027eaa670122e9532251091c706f00e97374f6")},
-
+                {1,     uint256S("000000000013864717b44ff0a19141d25ae2b591b505cc2e5a5232f8269cbe42")},
+                {250,   uint256S("000000000059bba5efe387b9ee0f45e39dc9108058900425f7daa51793e8adf9")},
             }
         };
 
