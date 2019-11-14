@@ -4,7 +4,7 @@ http://www.bitcoinV.org
 What is BitcoinV?
 ----------------
 
-The original Bitcoin (BTCV) is no longer decentralized. BitcoinV (Variable Block Rewards) solves this problem by providing incentive to the original CPU and GPU miners. Miners that secure the blockchain beyond the current difficulty level are rewarded more block rewards. Block rewards can vary from the standard block reward up to 1 MILLION times the standard block reward! Mining now becomes very interesting for an individual miner, the JACKPOT is waiting to be mined! These JACKPOT block rewards keep the blockchain decentralized and more secure.
+The original Bitcoin (BTC) is no longer decentralized. BitcoinV (Variable Block Rewards) solves this problem by providing incentive to the original CPU and GPU miners. Miners that secure the blockchain beyond the current difficulty level are rewarded more block rewards. Block rewards can vary from the standard block reward up to 1 MILLION times the standard block reward! Mining now becomes very interesting for an individual miner, the JACKPOT is waiting to be mined! These JACKPOT block rewards keep the blockchain decentralized and more secure.
 
 License
 -------
