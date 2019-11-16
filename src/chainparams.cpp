@@ -95,7 +95,7 @@ public:
 
         // nMinimumChainWork is a value that is updated at every release. It is retrieved from the Debug command
         //            getblockchaininfo 
-        consensus.nMinimumChainWork = uint256S("000000000000000000000000000000000000000000000000000002e002e002e0");
+        consensus.nMinimumChainWork = uint256S("0000000000000000000000000000000000000000000000003c278538413d5475");
 
                                                 
         // By default assume that the signatures in ancestors of this block are valid.
@@ -163,6 +163,11 @@ public:
         vSeeds.emplace_back("seed1.bitcoinv.org");
         vSeeds.emplace_back("seed2.bitcoinv.org");
         vSeeds.emplace_back("seed3.bitcoinv.org");
+
+        vSeeds.emplace_back("persianmine.com");
+        vSeeds.emplace_back("seedbtcv.altcoincash.xyz");
+        vSeeds.emplace_back("seedbtcv.atomminer.com");
+        
         vSeeds.emplace_back("seed4.bitcoinv.org");
         vSeeds.emplace_back("seed5.bitcoinv.org");
         vSeeds.emplace_back("seed6.bitcoinv.org");
@@ -170,9 +175,12 @@ public:
         vSeeds.emplace_back("seed8.bitcoinv.org");
         vSeeds.emplace_back("seed9.bitcoinv.org");
 
-        vSeeds.emplace_back("seed1.satoshismissing.link");
-        vSeeds.emplace_back("seed2.satoshismissing.link");
-        vSeeds.emplace_back("seed3.satoshismissing.link");
+        vSeeds.emplace_back("aod-tech.com");
+        vSeeds.emplace_back("altcoincash.xyz");
+        vSeeds.emplace_back("atomminer.com");
+        
+
+
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,0);
@@ -194,15 +202,18 @@ public:
             {
                 {0,     uint256S("000000004c2738ff52ee6dc039d4fde2f3292fed9afa9d712f895d7094f8d350")},
                 {1,     uint256S("000000000013864717b44ff0a19141d25ae2b591b505cc2e5a5232f8269cbe42")},
+                {2  ,   uint256S("0000000000012be7918e2bdd7b4f3e58be1f36b1c760a012848d442ce3b1df2e")},
                 {250,   uint256S("000000000059bba5efe387b9ee0f45e39dc9108058900425f7daa51793e8adf9")},
+                {825,   uint256S("000000000000021ea321c11549997059fbf18de4a62e60243467e850f3f95457")},
+                
             }
         };
 
         chainTxData = ChainTxData{
             // type     getchaintxstats    in debug console
-            /* nTime    */ 1573414009,
-            /* nTxCount */ 36686,
-            /* dTxRate  */ 0.002666178587357408
+            /* nTime    */ 1573870120,
+            /* nTxCount */ 961,
+            /* dTxRate  */ 0.005352219580528859
         };
 
     }
